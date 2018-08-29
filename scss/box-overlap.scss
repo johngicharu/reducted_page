@@ -1,0 +1,89 @@
+#box-overlap {
+  height: 300px;
+  width: 80%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+  @include grid;
+
+  .box-card {
+    position:relative;
+    height:100%;
+    border: 1px solid black;
+    @include transition;
+
+    .container {
+      position:absolute;
+      top:0;
+      bottom:0;
+      right:0;
+      left:0;
+    }
+
+    img {
+      @include img;
+    }
+
+    .box-card-text {
+      @include card-text;
+      opacity:0;
+      @include transition;
+    }
+
+    &:hover {
+      &::after {
+        content:'';
+        background-color: $clr-black;
+        opacity:.4;
+        position:absolute;
+        top:0;
+        bottom:0;
+        right:0;
+        left:0;
+      }
+      .box-card-text {
+        opacity:1;
+      }
+    }
+  }
+
+  .box-card {
+    .container {
+      &::before, &::after {
+        content:'';
+        position:absolute;
+        top: 1em;
+        bottom: 1em;
+        right: 1em;
+        left: 1em;
+        z-index: 2;
+      }
+
+      &::before {
+        border-top: 2px solid $clr-gray;
+        border-bottom: 2px solid $clr-gray;
+        transform: scale(0,1);
+        @include transition;
+      }
+
+      &::after {
+        border-right: 2px solid $clr-gray;
+        border-left: 2px solid $clr-gray;
+        transform: scale(1,0);
+        @include transition;
+      }
+    }
+    &:hover {
+      .container{
+        &::before {
+          transform: scale(1.1,1);
+        }
+        &::after {
+          transform: scale(1,1.1);
+        }
+      }
+    }
+  }
+}

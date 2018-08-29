@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Qwigley|Vollkorn');
+@import "mixins.scss";
+
+// Variables
+@import "variables.scss";
+@import "universal-styles.scss";
+@import "box-overlap.scss";
+@import "box.scss";
+
+main {
+  > header {
+    margin: 10px;
+    margin-top: 15vh;
+    text-transform: uppercase;
+    font-family: $ff-third;
+    font-weight: bold;
+    font-size: 1.5em;
+    letter-spacing: .2em;
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  main {
+    > header {
+      margin-top: 36vh;
+    }
+  }
+}

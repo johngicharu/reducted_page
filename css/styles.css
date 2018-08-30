@@ -172,6 +172,10 @@ footer {
         text-transform: uppercase;
         font-family: "Merriweather";
         font-size: 1.3em; }
+      #box-overlap .box-card .box-card-text header, #box-overlap .box-card .box-card-text p {
+        -webkit-transform: scale(1, 0);
+        -ms-transform: scale(1, 0);
+        transform: scale(1, 0); }
     #box-overlap .box-card:hover::after {
       content: '';
       background-color: #333;
@@ -182,7 +186,29 @@ footer {
       right: 0;
       left: 0; }
     #box-overlap .box-card:hover .box-card-text {
-      opacity: 1; }
+      opacity: 1;
+      -webkit-transition: all;
+      -o-transition: all;
+      transition: all;
+      -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+      transition-timing-function: ease-in-out;
+      -webkit-transition-duration: 250ms;
+      -o-transition-duration: 250ms;
+      transition-duration: 250ms; }
+      #box-overlap .box-card:hover .box-card-text header, #box-overlap .box-card:hover .box-card-text p {
+        -webkit-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        transform: scale(1, 1);
+        -webkit-transition: all;
+        -o-transition: all;
+        transition: all;
+        -webkit-transition-timing-function: ease-in-out;
+        -o-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+        -webkit-transition-duration: 250ms;
+        -o-transition-duration: 250ms;
+        transition-duration: 250ms; }
   #box-overlap .box-card .container::before, #box-overlap .box-card .container::after {
     content: '';
     position: absolute;
@@ -348,6 +374,154 @@ footer {
     -ms-transform: scale(1, 1);
     transform: scale(1, 1); }
 
+#box-two {
+  height: 300px;
+  width: 80%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  padding: 10px; }
+  @media (max-width: 700px) {
+    #box-two {
+      grid-template-columns: 350px;
+      height: 500px; } }
+  #box-two .box-card {
+    position: relative;
+    height: 100%;
+    border: 1px solid black;
+    -webkit-transition: all;
+    -o-transition: all;
+    transition: all;
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 250ms;
+    -o-transition-duration: 250ms;
+    transition-duration: 250ms; }
+    #box-two .box-card .container {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0; }
+    #box-two .box-card img {
+      width: 100%;
+      height: 100%; }
+    #box-two .box-card .box-card-text {
+      -webkit-transition: all;
+      -o-transition: all;
+      transition: all;
+      -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+      transition-timing-function: ease-in-out;
+      -webkit-transition-duration: 250ms;
+      -o-transition-duration: 250ms;
+      transition-duration: 250ms;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      color: #f4f4f4;
+      font-weight: bold;
+      text-align: center;
+      word-spacing: .2em;
+      z-index: 2;
+      opacity: 1; }
+      #box-two .box-card .box-card-text > header {
+        text-transform: uppercase;
+        font-family: "Merriweather";
+        font-size: 1.3em;
+        -webkit-transform: scale(0, 1);
+        -ms-transform: scale(0, 1);
+        transform: scale(0, 1); }
+      #box-two .box-card .box-card-text p {
+        -webkit-transform: scale(0, 1);
+        -ms-transform: scale(0, 1);
+        transform: scale(0, 1); }
+    #box-two .box-card:hover::after {
+      content: '';
+      background-color: #333;
+      opacity: .4;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0; }
+    #box-two .box-card:hover .box-card-text {
+      opacity: 1;
+      color: #f4f4f4 !important;
+      -webkit-transition: all;
+      -o-transition: all;
+      transition: all;
+      -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+      transition-timing-function: ease-in-out;
+      -webkit-transition-duration: 250ms;
+      -o-transition-duration: 250ms;
+      transition-duration: 250ms; }
+      #box-two .box-card:hover .box-card-text header, #box-two .box-card:hover .box-card-text p {
+        -webkit-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        transform: scale(1, 1);
+        -webkit-transition: all;
+        -o-transition: all;
+        transition: all;
+        -webkit-transition-timing-function: ease-in-out;
+        -o-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+        -webkit-transition-duration: 250ms;
+        -o-transition-duration: 250ms;
+        transition-duration: 250ms; }
+  #box-two .box-card .container::before, #box-two .box-card .container::after {
+    content: '';
+    position: absolute;
+    top: 1em;
+    bottom: 1em;
+    right: 1em;
+    left: 1em;
+    z-index: 2; }
+  #box-two .box-card .container::before {
+    border-top: 2px solid #f4f4f4;
+    border-bottom: 2px solid #f4f4f4;
+    -webkit-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transition: all;
+    -o-transition: all;
+    transition: all;
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 250ms;
+    -o-transition-duration: 250ms;
+    transition-duration: 250ms; }
+  #box-two .box-card .container::after {
+    border-right: 2px solid #f4f4f4;
+    border-left: 2px solid #f4f4f4;
+    -webkit-transform: scale(1, 0);
+    -ms-transform: scale(1, 0);
+    transform: scale(1, 0);
+    -webkit-transition: all;
+    -o-transition: all;
+    transition: all;
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 250ms;
+    -o-transition-duration: 250ms;
+    transition-duration: 250ms; }
+  #box-two .box-card:hover .container::before {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1); }
+  #box-two .box-card:hover .container::after {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1); }
+
 main > header {
   margin: 10px;
   margin-top: 15vh;
@@ -357,6 +531,12 @@ main > header {
   font-size: 1.5em;
   letter-spacing: .2em;
   text-align: center; }
+
+main .box {
+  text-align: left;
+  margin-left: 10%;
+  z-index: 2;
+  margin-top: -.1vh; }
 
 @media (max-width: 700px) {
   main > header {

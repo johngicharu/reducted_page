@@ -1,4 +1,4 @@
-#box-overlap {
+#box-two {
   height: 300px;
   width: 80%;
   margin: 20px auto;
@@ -27,12 +27,27 @@
     }
 
     .box-card-text {
-      @include card-text;
-      opacity:0;
       @include transition;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $clr-gray;
+      font-weight: bold;
+      text-align: center;
+      word-spacing: .2em;
+      z-index: 2;
+      opacity: 1;
 
-      header, p {
-        transform: scale(1,0);
+
+      >header {
+        text-transform: uppercase;
+        font-family: $ff-third;
+        font-size: 1.3em;
+        transform: scale(0,1);
+      }
+      p {
+        transform: scale(0,1);
       }
     }
 
@@ -47,9 +62,11 @@
         right:0;
         left:0;
       }
-      .box-card-text {
+      .box-card-text{
         opacity:1;
+        color: $clr-gray !important;
         @include transition;
+
         header, p {
           transform: scale(1,1);
           @include transition;
@@ -87,10 +104,10 @@
     &:hover {
       .container{
         &::before {
-          transform: scale(1.05,1);
+          transform: scale(1,1);
         }
         &::after {
-          transform: scale(1,1.05);
+          transform: scale(1,1);
         }
       }
     }

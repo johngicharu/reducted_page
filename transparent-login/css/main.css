@@ -1,0 +1,103 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  background-color: #f4f4f4;
+  line-height: 1.5;
+  font-family: "Vollkorn";
+  font-size: 1.2em; }
+
+a {
+  text-decoration: none; }
+
+main {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/16.jpeg");
+  background-position: center;
+  background-size: cover;
+  position: relative; }
+  main .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 20px;
+    width: 35vw; }
+
+.container .header {
+  text-align: center;
+  color: #FC3E3E;
+  margin: 5px;
+  width: 100%;
+  letter-spacing: .2em;
+  font-size: .9em;
+  height: 10%; }
+
+form {
+  width: 90%;
+  margin: 10% auto;
+  position: relative;
+  padding: 10px; }
+  form > a {
+    font-size: .5em;
+    color: #FC3E3E;
+    position: absolute;
+    right: 0;
+    bottom: 10%; }
+  form .input input {
+    width: 100%;
+    height: 30px;
+    left: 0;
+    right: 0;
+    outline: none !important;
+    border: none;
+    border-bottom: 1px solid #f4f4f4;
+    background-color: transparent;
+    padding: 10px; }
+  form .input-user, form .input-password {
+    margin-bottom: 20px;
+    position: relative; }
+    form .input-user label, form .input-password label {
+      color: #f4f4f4;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      left: 5px;
+      font-size: .7em;
+      pointer-events: none;
+      -webkit-transition: all ease-in-out 250ms;
+      -o-transition: all ease-in-out 250ms;
+      transition: all ease-in-out 250ms; }
+
+input[type="submit"] {
+  padding: 6px 30px;
+  border-radius: 10px;
+  font-size: .6em;
+  border: none;
+  color: #f4f4f4;
+  background-color: #FC3E3E;
+  font-size: bold;
+  font-family: inherit; }
+
+.input-user, .input-password, input[type="text"], input[type="password"] {
+  color: #f4f4f4; }
+  .input-user:hover label, .input-user:active label, .input-user:valid label, .input-password:hover label, .input-password:active label, .input-password:valid label, input[type="text"]:hover label, input[type="text"]:active label, input[type="text"]:valid label, input[type="password"]:hover label, input[type="password"]:active label, input[type="password"]:valid label {
+    color: #3E57FC;
+    font-size: .5em;
+    top: -20%;
+    left: 0; }
+    .input-user:hover label:focus label, .input-user:active label:focus label, .input-user:valid label:focus label, .input-password:hover label:focus label, .input-password:active label:focus label, .input-password:valid label:focus label, input[type="text"]:hover label:focus label, input[type="text"]:active label:focus label, input[type="text"]:valid label:focus label, input[type="password"]:hover label:focus label, input[type="password"]:active label:focus label, input[type="password"]:valid label:focus label {
+      color: #3E57FC;
+      font-size: .5em;
+      top: -20%;
+      left: 0; }
